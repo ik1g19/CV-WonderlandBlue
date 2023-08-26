@@ -37,6 +37,11 @@
 \definecolor{sidecolor}{HTML}{272828}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{webblue}{HTML}{5ce1e6} % 5ce1e6 in RGB
+\definecolor{sectionblue}{HTML}{38b6ff}
+\definecolor{body}{HTML}{D3D3D3} % You can change the color code as needed.
+\definecolor{tagblue}{HTML}{38b6ff}
+
 
 %----------------------------------------------------------------------------------------
 %	 MISC CONFIGURATIONS
@@ -102,38 +107,58 @@
     \fi
 }
 
+% Define a new column type Y that does not hyphenate its content
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+
 \NewDocumentCommand{\qualifications}{}{
     \setcounter{modulecounter}{0}
     \def\modulecontent{} 
     \foreach \x in \modulelist {
         \accumulatemodules{\x}
     }
-    \begin{tabularx}{\linewidth}{XX}
+    \begin{tabularx}{\linewidth}{YY}
     \modulecontent 
     \end{tabularx}
 }
 
 
 
-% Define the storage macro
-\newcommand{\skilllist}{}
-% Define the setter macro
-\newcommand{\setskilllist}[1]{\renewcommand{\skilllist}{#1}}
+%% Define the storage macro
+%\newcommand{\skilllist}{}
+%% Define the setter macro
+%\newcommand{\setskilllist}[1]{\renewcommand{\skilllist}{#1}}
+%
+%\newcommand{\accumulateskills}[1]{
+%    \xdef\skillcontent{\skillcontent \colorbox{sectionblue}{#1orange} }
+%}
+%
+%\NewDocumentCommand{\skills}{}{
+%    \def\skillcontent{} 
+%    \foreach \x in \skilllist {
+%        \accumulateskills{\x}
+%    }
+%    \skillcontent
+%}
 
-\newcommand{\accumulateskills}[1]{
-    \xdef\skillcontent{\skillcontent #1, }
+
+% Define the storage macro
+\newcommand{\taglist}{} 
+% Define the setter macro
+\newcommand{\setcvtags}[1]{\renewcommand{\taglist}{#1}}
+
+% Fork v1.6.5c: A parser for several tags that will reutilize the cvtag component in a less verbose way
+\newcommand{\cvtags}{%
+	\foreach \tagValue in \taglist {%
+		\cvtag{\tagValue}
+	}
 }
 
-\NewDocumentCommand{\skills}{}{
-    \def\skillcontent{} 
-    \foreach \x in \skilllist {
-        \accumulateskills{\x}
-    }
-    % Remove the trailing comma and space
-    \bgroup
-    \edef\temp{\noexpand\StrGobbleRight{\skillcontent}{2}\noexpand\relax}
-    \temp
-    \egroup
+% Fork (before v1.6.5a): Tags now have a more consistent vertican and horizontal separation
+\newcommand{\cvtag}[1]{%
+	\color{white}
+	\tikz[baseline]\node[anchor=base,fill=black,draw=black,rounded corners,inner xsep=1ex,inner ysep=0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+	\vspace{0.25ex}
 }
 
 
@@ -196,11 +221,25 @@
 
 		%------------------------------------------------
 		
-		\ifthenelse{\equal{\skills}{}}{}{
-			\profilesection{Key Skills}
-            \color{white}    
+%		\ifthenelse{\equal{\skills}{}}{}{
+%			\profilesection{Key Skills}
+%            \color{white}    
+%			\begin{flushleft}
+%				\skills
+%			\end{flushleft}
+%		}
+		{
+			\profilesection{Education}
+			\color{white}
 			\begin{flushleft}
-				\skills
+			
+				\begin{tabular}{l} % Environment for a list with descriptions
+					\educationitem{2019-2023}{MEng Computer Science}{University of Southampton}
+					\educationitem{2017-2019}{A Level}{Bexhill College}
+					\educationitem{2017}{GCSE}{Bexhill 6th Form}
+					%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+				\end{tabular}
+		
 			\end{flushleft}
 		}
 
@@ -307,6 +346,19 @@
 		#4\vspace{\parsep}%
 	}\\
 }
+
+
+
+\newcommand{\educationitem}[3]{%
+	\parbox[t]{\textwidth}{%
+		#1\\
+		\textbf{#2}\\
+		#3
+	}\vspace{0.3em}\\
+}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	 SMALL LIST ENVIRONMENT
