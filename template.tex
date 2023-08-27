@@ -21,6 +21,19 @@
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
@@ -31,21 +44,64 @@
 
 \cvname{Isaac Klugman} % Your name
 
-\cvdate{26 November 1865} % Date of birth
-\cvaddress{United Kingdom} % Short address/location, use \newline if more than 1 line is required
-\cvnumberphone{+39 0325658974} % Phone number
-\cvsite{http://en.wikipedia.org} % Personal website
-\cvmail{alice@wonderland.com} % Email address
+\cvdate{30 April 2001} % Date of birth
+\cvaddress{134 Avenue Road} % Short address/location, use \newline if more than 1 line is required
+\cvaddresstwo{Southampton SO14 6UA}
+\cvnumberphone{07858248752} % Phone number
+\cvsite{isaacklugman.com} % Personal website
+\cvmail{isaacklugman@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 \begin{document}
 
+
+
+
+
+
+
+
+
+
+
+
+
 %----------------------------------------------------------------------------------------
-%	 ABOUT ME
+%	 EDUCATION
 %----------------------------------------------------------------------------------------
 
 %\setskilllist{Python, Java}
+\newcommand{\myEducationTable}{
+	\begin{tabular}{l}
+		\educationitem{2019-2023}{MEng Computer Science}{University of Southampton}
+		\educationitem{2017-2019}{A Level}{Bexhill College}
+		\educationitem{2017}{GCSE}{Bexhill 6th Form}
+	\end{tabular}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -57,42 +113,97 @@
 
 
 
-%------------------------------------------------
 
 
-%----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 \makeprofile % Print the sidebar
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 %----------------------------------------------------------------------------------------
-%	 INTERESTS
+%	 PERSONAL STATEMENT
 %----------------------------------------------------------------------------------------
 
 \section*{Personal Statement}
 
 I am a recent graduate of the University of Southampton and am excited to begin my career in industry. Throughout my studies, I have been passionate about problem solving and have developed interests in the cyber security and computer vision sectors, I am specifically proud of my work as a computer vision researcher for user position tracking systems at Audioscenic.  My web links provide a more detailed look at my university projects and practical experience. I am very passionate about teaching myself new things and will always try to find a way to pick up new skills - so a new and challenging project is always welcome. I am personable and a team player and have experience with working in several Agile/SCRUM project development life cycles through multiple University projects.
 
+
+
+
+
+
+
+
+
+
+
+
+
 %----------------------------------------------------------------------------------------
-%	 EDUCATION
+%	 TECH SKILLS
 %----------------------------------------------------------------------------------------
-
-\section*{Education}
-
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem{2019-2023}{MEng Computer Science}{University of Southampton}{}
-	\twentyitem{2017-2019}{A Level}{Bexhill College}{}
-	\twentyitem{2017}{GCSE}{Bexhill 6th Form}{}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
-
-
-
 
 
 \section*{Technical Skills}
 
 \setcvtags{Java, C++, C, C\#, Haskell, SQL, Python, BASH, HTML}
 \cvtags
+
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 PROJECTS
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+\section*{Projects}
+
+\begin{tabular}{l} % Environment for a list with descriptions
+	\projectitem{Audioscenic stuff}{University of Southampton}
+	\projectitem{Online Notes Garden}{University of Southampton}
+	\projectitem{GDP Project}{University of Southampton}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{tabular}
+
+
+
+
+
+
+
+
 
 
 
@@ -103,25 +214,24 @@ I am a recent graduate of the University of Southampton and am excited to begin 
 \section*{Publications}
 
 \begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{1865}{Chapter One, Down the Rabbit Hole.}
-	\twentyitemshort{1865}{Chapter Two, The Pool of Tears.}
-	\twentyitemshort{1865}{Chapter Three,  The Caucus Race and a Long Tale.}
-	\twentyitemshort{1865}{Chapter Four,  The Rabbit Sends a Little Bill.}
-	\twentyitemshort{1865}{Chapter Five,  Advice from a Caterpillar.}
+	\twentyitemshort{2023}{Publication Title: 2023 International Conference on Engineering and Emerging Technologies (ICEET)\newline
+		Article Title: Real-time 3D multi-person pose estimation using an omnidirectional camera and mmWave radars}
 	%\twentyitemshort{<dates>}{<title/description>}
 \end{twentyshort}
 
-%----------------------------------------------------------------------------------------
-%	 AWARDS
-%----------------------------------------------------------------------------------------
 
-\section*{Awards}
 
-\begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{1987}{All-Time Best Fantasy Novel.}
-	\twentyitemshort{1998}{All-Time Best Fantasy Novel before 1990.}
-	%\twentyitemshort{<dates>}{<title/description>}
-\end{twentyshort}
+
+
+
+
+
+
+
+
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE

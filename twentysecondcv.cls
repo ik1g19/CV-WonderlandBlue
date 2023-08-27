@@ -85,6 +85,7 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
+\newcommand{\cvaddresstwo}[1]{\renewcommand{\cvaddresstwo}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\education}[1]{\renewcommand{\education}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
@@ -157,11 +158,9 @@
 % Fork (before v1.6.5a): Tags now have a more consistent vertican and horizontal separation
 \newcommand{\cvtag}[1]{%
 	\color{white}
-	\tikz[baseline]\node[anchor=base,fill=black,draw=black,rounded corners,inner xsep=1ex,inner ysep=0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+	\tikz[baseline]\node[anchor=base,fill=black,draw=black,rounded corners,inner xsep=1ex,inner ysep=0.75ex,text height=1.5ex,text depth=.25ex]{\bfseries#1};
 	\vspace{0.25ex}
 }
-
-
 
 
 
@@ -212,6 +211,7 @@
 		\renewcommand{\arraystretch}{1.6}
         \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
             \ifthenelse{\equal{\cvaddress}{}}{}{\Large\includegraphics[height=1em]{map.png} & \raisebox{0.25em}{\color{white}\texttt{\cvaddress}}\\} % Modified line
+            \ifthenelse{\equal{\cvaddresstwo}{}}{}{ & \raisebox{0.25em}{\color{white}\texttt{\cvaddresstwo}}\\} % Modified line
             \ifthenelse{\equal{\cvnumberphone}{}}{}{\Large\includegraphics[height=1em]{phone-receiver-silhouette.png} & \raisebox{0.25em}{\color{white}\texttt{\cvnumberphone}}\\} % Modified line
             \ifthenelse{\equal{\cvsite}{}}{}{\Large\includegraphics[height=1em]{world-wide-web.png} & \raisebox{0.25em}{\color{white}\texttt{\cvsite}}\\} % Modified line
             \ifthenelse{\equal{\cvmail}{}}{}{\Large\includegraphics[height=1em]{mail.png} & \raisebox{0.25em}{\color{white}\texttt{\cvmail}}\\} % Modified line
@@ -234,10 +234,7 @@
 			\begin{flushleft}
 			
 				\begin{tabular}{l} % Environment for a list with descriptions
-					\educationitem{2019-2023}{MEng Computer Science}{University of Southampton}
-					\educationitem{2017-2019}{A Level}{Bexhill College}
-					\educationitem{2017}{GCSE}{Bexhill 6th Form}
-					%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+					\myEducationTable
 				\end{tabular}
 		
 			\end{flushleft}
@@ -345,6 +342,15 @@
 		{\footnotesize#3}\\%
 		#4\vspace{\parsep}%
 	}\\
+}
+
+
+
+\newcommand{\projectitem}[2]{%
+	\parbox[t]{0.83\textwidth}{%
+		\textbf{#1}\\
+		#2
+	}\vspace{1.0em}\\
 }
 
 
