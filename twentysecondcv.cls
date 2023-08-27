@@ -210,11 +210,11 @@
 
 		\renewcommand{\arraystretch}{1.6}
         \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-            \ifthenelse{\equal{\cvaddress}{}}{}{\Large\includegraphics[height=1em]{map.png} & \raisebox{0.25em}{\color{white}\texttt{\cvaddress}}\\} % Modified line
-            \ifthenelse{\equal{\cvaddresstwo}{}}{}{ & \raisebox{0.25em}{\color{white}\texttt{\cvaddresstwo}}\\} % Modified line
-            \ifthenelse{\equal{\cvnumberphone}{}}{}{\Large\includegraphics[height=1em]{phone-receiver-silhouette.png} & \raisebox{0.25em}{\color{white}\texttt{\cvnumberphone}}\\} % Modified line
-            \ifthenelse{\equal{\cvsite}{}}{}{\Large\includegraphics[height=1em]{world-wide-web.png} & \raisebox{0.25em}{\color{white}\texttt{\cvsite}}\\} % Modified line
-            \ifthenelse{\equal{\cvmail}{}}{}{\Large\includegraphics[height=1em]{mail.png} & \raisebox{0.25em}{\color{white}\texttt{\cvmail}}\\} % Modified line
+            \ifthenelse{\equal{\cvaddress}{}}{}{\Large\includegraphics[height=1em]{map.png} & \raisebox{0.35em}{\color{white}\texttt{\cvaddress}}\\} % Modified line
+            \ifthenelse{\equal{\cvaddresstwo}{}}{}{ & \raisebox{0.35em}{\color{white}\texttt{\cvaddresstwo}}\\} % Modified line
+            \ifthenelse{\equal{\cvnumberphone}{}}{}{\Large\includegraphics[height=1em]{phone-receiver-silhouette.png} & \raisebox{0.35em}{\color{white}\texttt{\cvnumberphone}}\\} % Modified line
+            \ifthenelse{\equal{\cvsite}{}}{}{\Large\includegraphics[height=1em]{world-wide-web.png} & \raisebox{0.35em}{\color{white}\texttt{\cvsite}}\\} % Modified line
+            \ifthenelse{\equal{\cvmail}{}}{}{\Large\includegraphics[height=1em]{mail.png} & \raisebox{0.35em}{\color{white}\texttt{\cvmail}}\\} % Modified line
         \end{tabular}
 
 
@@ -232,7 +232,7 @@
 			\profilesection{Education}
 			\color{white}
 			\begin{flushleft}
-			
+				\vspace{-1.4em}
 				\begin{tabular}{l} % Environment for a list with descriptions
 					\myEducationTable
 				\end{tabular}
@@ -246,7 +246,9 @@
 			\profilesection{Qualifications}
             \color{white}    
 			\begin{flushleft}
+				{\large\textbf{MEng Computer Science 2:1}}
 				\qualifications
+				\schoolgrades
 			\end{flushleft}
 		}
 
@@ -281,25 +283,7 @@
 		% }
 
 
-		%------------------------------------------------
 
-		%------------------------------------------------
-
-		%------------------------------------------------
-
-		%------------------------------------------------
-
-        \ifthenelse{\equal{\qualifications}{}}{}{
-			\profilesection{Qualifications}
-            \color{white}    
-			\begin{flushleft}
-				\qualifications
-			\end{flushleft}
-		}
-
-
-		\scriptsize
-		(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
 			
 		%------------------------------------------------
 			
@@ -335,6 +319,12 @@
 	\end{tabular*}
 }
 
+\newenvironment{projects}{%
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l}
+	}{%
+	\end{tabular*}
+}
+
 \newcommand{\twentyitem}[4]{%
 	#1&\parbox[t]{0.83\textwidth}{%
 		\textbf{#2}%
@@ -346,11 +336,13 @@
 
 
 
-\newcommand{\projectitem}[2]{%
-	\parbox[t]{0.83\textwidth}{%
-		\textbf{#1}\\
-		#2
-	}\vspace{1.0em}\\
+\newcommand{\projectitem}[3]{%
+	\parbox[t]{\linewidth}{%
+		\textbf{#1}
+		\hfill
+		{\footnotesize#2}\\
+		#3\vspace{1.0em}
+	}\\
 }
 
 
