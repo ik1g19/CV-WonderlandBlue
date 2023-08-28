@@ -85,7 +85,6 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
-\newcommand{\cvaddresstwo}[1]{\renewcommand{\cvaddresstwo}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\education}[1]{\renewcommand{\education}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
@@ -211,7 +210,6 @@
 		\renewcommand{\arraystretch}{1.6}
         \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
             \ifthenelse{\equal{\cvaddress}{}}{}{\Large\includegraphics[height=1em]{map.png} & \raisebox{0.35em}{\color{white}\texttt{\cvaddress}}\\} % Modified line
-            \ifthenelse{\equal{\cvaddresstwo}{}}{}{ & \raisebox{0.35em}{\color{white}\texttt{\cvaddresstwo}}\\} % Modified line
             \ifthenelse{\equal{\cvnumberphone}{}}{}{\Large\includegraphics[height=1em]{phone-receiver-silhouette.png} & \raisebox{0.35em}{\color{white}\texttt{\cvnumberphone}}\\} % Modified line
             \ifthenelse{\equal{\cvsite}{}}{}{\Large\includegraphics[height=1em]{world-wide-web.png} & \raisebox{0.35em}{\color{white}\texttt{\cvsite}}\\} % Modified line
             \ifthenelse{\equal{\cvmail}{}}{}{\Large\includegraphics[height=1em]{mail.png} & \raisebox{0.35em}{\color{white}\texttt{\cvmail}}\\} % Modified line
@@ -242,9 +240,9 @@
 
 		%------------------------------------------------
 
-        \ifthenelse{\equal{\qualifications}{}}{}{
-			\profilesection{Qualifications}
-            \color{white}    
+        {
+			\profilesection{Qualifications}   
+			\color{white}
 			\begin{flushleft}
 				{\large\textbf{MEng Computer Science 2:1}}
 				\qualifications
