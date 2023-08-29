@@ -29,6 +29,9 @@
 
 
 
+%----------------------------------------------------------------------------------------
+%	 UNCHANGING INFORMATION
+%----------------------------------------------------------------------------------------
 
 
 
@@ -53,29 +56,6 @@
 %----------------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
-
-
-\begin{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
 %----------------------------------------------------------------------------------------
@@ -88,28 +68,6 @@
 		\educationitem{2017}{GCSE}{Bexhill 6th Form}
 	\end{tabular}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%----------------------------------------------------------------------------------------
-%	 QUALIFICATIONS
-%----------------------------------------------------------------------------------------
-
-\setmodulelist{Software Security, Web and Cloud Based Security, Computer Vision, Principles of Cyber Security, Biometrics, Distributed Systems and Networks, Intelligent Systems, Advanced Computer Networks, Intelligent Agents, Algorithmics, Advanced Databases, Algorithmic Game Theory, Data Management, Software Modelling and Design, Advanced Programming Language Concepts, Engineering Management and Law}
-
 
 \newcommand{\schoolgrades}{
 	\begin{tabularx}{\linewidth}{XXXX}
@@ -124,26 +82,84 @@
 
 
 
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\newcommand{\experience}{
+	\begin{twenty} % Environment for a list with descriptions
+		\twentyitem{2023}{Computer Vision Research and Development: User Position Tracking Systems}{Audioscenic}{Led research initiatives focused on head pose estimation techniques viable up to five meters. Designed and implemented data visualization and collection tools as well as researching cutting-edge deep learning methodologies for pose estimation. My contributions led to the integration of these tools into the company's internal testing platforms, streamlining further development efforts.}
+		\twentyitem{2021}{Barista}{Showcase Cinema, Costa}{This role involved performing openings and closings, till management and money handling, making and serving coffee, customer service and food handling.}
+		\twentyitem{2019}{Customer Assistant}{Primark}{This role invovled serving customers at the till, money handling and maintaining a clean store front.}
+		\twentyitem{2018-2019}{Barista Volunteer}{The Pelham}{This was a volunteer role and involved making and serving coffee, money handling and customer service.}
+	\end{twenty}
+}
 
 
 
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\publications}{
+	\begin{twenty} % Environment for a short list with no descriptions
+		\twentyitem{2023}{Real-time 3D Multi-person Pose Estimation using an Omnidirectional Camera and mmWave Radars}{}{Publication Title: 2023 International Conference on Engineering and Emerging Technologies (ICEET)}
+	\end{twenty}
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 PROJECTS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\projectsection}{
+	\begin{projects}
+		\projectitem{JavaFX Dashboard Application}{University of Southampton}{Developed as part of a second-year Software Engineering Group Project. Collaborated in a team of four to build a dashboard for a client that enables loading and visualization of data statistics and analytics. JavaFX was used to build the application and SQL was used as the backend.}
+		\projectitem{Multi-person 3D Pose Estimation System}{University of Southampton}{A fourth-year Group Design Project where I was part of a five-member team. Initiated 2D pose estimation using an omnidirectional camera, followed by the transformation of 2D keypoints to 3D using a neural network and mmWave radars. Ensured smooth project progression by adhering to Agile development methodologies and holding regular client meetings.}
+		\projectitem{Interactive Music Hypertext System}{University of Southampton}{This third-year individual project involved research into the application of hypertext structures and Interactive Digital Narratives in music consumption. The project resulted in an interactive interface for listening to music with branching structures.}
+		\projectitem{Head Pose Tracking Analysis Tools}{Audioscenic}{Designed multiple GUI applications to perform offline analysis of head pose tracking system performance. Important features include a heat-map for visualizing tracking at varied room positions and head orientations, and a tool for frame-by-frame analysis.}
+		\projectitem{Online Notes Garden}{}{I actively maintain a collection of notes on my personal website. The site is hosted via GitHub pages and the deployment involves parsining notes from markdown via a static site generator, providing an interconnected web of ideas and promoting a richer study experience.}
+	\end{projects}
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\interests}{
+	I am an eager self-learner and will always take the oppurtunity to continue my studies at home. As an alumni, I continue to study new things using the University resources - I am currently very interested in studying deep learning technologies for computer vision.
+	
+	Outside of my studies I am very passionate about music, I grew up learning violin, but am now a self taught guitarist and pianist. In addition to developing my own skills, I hope to start sharing my experience through online material for others who are starting. As well as writing my own music, I spend a lot of time listening to others' - I find my inspiration from bands and artists such as Pink Floyd, Fleetwood Mac, Elliot Smith, Billy Joel and David Bowie.
+}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	 INFO TO CHANGE
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+
+
+
+%----------------------------------------------------------------------------------------
+%	 QUALIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\setmodulelist{Software Security, Web and Cloud Based Security, Computer Vision, Principles of Cyber Security, Biometrics, Distributed Systems and Networks, Intelligent Systems, Advanced Computer Networks, Intelligent Agents, Algorithmics, Advanced Databases, Algorithmic Game Theory, Data Management, Software Modelling and Design, Advanced Programming Language Concepts, Engineering Management and Law}
 
 
 
 
 \makeprofile % Print the sidebar
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 %----------------------------------------------------------------------------------------
@@ -154,17 +170,6 @@
 
 
 A proud graduate of the University of Southampton, I am enthusiastic about advancing my career in the industry. I possess a keen interest in the latest advancements in deep learning and computer vision. With a strong foundation in self-directed learning, I eagerly embrace opportunities that challenge me and expand my skill set. As a proactive team player, I value collaboration and am committed to contributing meaningfully to any endeavor I undertake.
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -192,46 +197,13 @@ A proud graduate of the University of Southampton, I am enthusiastic about advan
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
 %----------------------------------------------------------------------------------------
 
 \section*{Experience}
 
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem{2023}{Computer Vision Research and Development: User Position Tracking Systems}{Audioscenic}{Led research initiatives focused on head pose estimation techniques viable up to five meters. Designed and implemented data visualization and collection tools as well as researching cutting-edge deep learning methodologies for pose estimation. My contributions led to the integration of these tools into the company's internal testing platforms, streamlining further development efforts.}
-	\twentyitem{2021}{Barista}{Showcase Cinema, Costa}{This role involved performing openings and closings, till management and money handling, making and serving coffee, customer service and food handling.}
-	\twentyitem{2019}{Customer Assistant}{Primark}{This role invovled serving customers at the till, money handling and maintaining a clean store front.}
-	\twentyitem{2018-2019}{Barista Volunteer}{The Pelham}{This was a volunteer role and involved making and serving coffee, money handling and customer service.}
-\end{twenty}
-
-
-
-
-
-
-
-
-
-
+\experience
 
 
 
@@ -242,15 +214,7 @@ A proud graduate of the University of Southampton, I am enthusiastic about advan
 
 \section*{Publications}
 
-\begin{twenty} % Environment for a short list with no descriptions
-	\twentyitem{2023}{Real-time 3D Multi-person Pose Estimation using an Omnidirectional Camera and mmWave Radars}{}{Publication Title: 2023 International Conference on Engineering and Emerging Technologies (ICEET)}
-\end{twenty}
-
-
-
-
-
-
+\publications
 
 
 
@@ -268,41 +232,14 @@ A proud graduate of the University of Southampton, I am enthusiastic about advan
 
 
 
-
-
-
-
-
-
-
 %----------------------------------------------------------------------------------------
 %	 PROJECTS
 %----------------------------------------------------------------------------------------
 
-
-
-
 \section*{Projects}
 
-\begin{projects}
-	\projectitem{JavaFX Dashboard Application}{University of Southampton}{Developed as part of a second-year Software Engineering Group Project. Collaborated in a team of four to build a dashboard for a client that enables loading and visualization of data statistics and analytics. JavaFX was used to build the application and SQL was used as the backend.}
-	\projectitem{Multi-person 3D Pose Estimation System}{University of Southampton}{A fourth-year Group Design Project where I was part of a five-member team. Initiated 2D pose estimation using an omnidirectional camera, followed by the transformation of 2D keypoints to 3D using a neural network and mmWave radars. Ensured smooth project progression by adhering to Agile development methodologies and holding regular client meetings.}
-	\projectitem{Interactive Music Hypertext System}{University of Southampton}{This third-year individual project involved research into the application of hypertext structures and Interactive Digital Narratives in music consumption. The project resulted in an interactive interface for listening to music with branching structures.}
-	\projectitem{Head Pose Tracking Analysis Tools}{Audioscenic}{Designed multiple GUI applications to perform offline analysis of head pose tracking system performance. Important features include a heat-map for visualizing tracking at varied room positions and head orientations, and a tool for frame-by-frame analysis.}
-	\projectitem{Online Notes Garden}{}{I actively maintain a collection of notes on my personal website. The site is hosted via GitHub pages and the deployment involves parsining notes from markdown via a static site generator, providing an interconnected web of ideas and promoting a richer study experience.}
-\end{projects}
 
-
-
-
-
-
-
-
-
-
-
-
+\projectsection
 
 
 
@@ -314,15 +251,8 @@ A proud graduate of the University of Southampton, I am enthusiastic about advan
 
 \section*{Interests}
 
-
-I am an eager self-learner and will always take the oppurtunity to continue my studies at home. As an alumni, I continue to study new things using the University resources - I am currently very interested in studying deep learning technologies for computer vision.
-
-Outside of my studies I am very passionate about music, I grew up learning violin, but am now a self taught guitarist and pianist. In addition to developing my own skills, I hope to start sharing my experience through online material for others who are starting. As well as writing my own music, I spend a lot of time listening to others' - I find my inspiration from bands and artists such as Pink Floyd, Fleetwood Mac, Elliot Smith, Billy Joel and David Bowie.
+\interests
 
 
-
-
-
-%----------------------------------------------------------------------------------------
 
 \end{document} 
