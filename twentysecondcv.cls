@@ -24,6 +24,8 @@
 \usepackage{xparse}
 \usepackage{tabularx}
 \usepackage{xstring}
+\usepackage{needspace}
+\usepackage{calc}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -149,16 +151,18 @@
 
 % Fork v1.6.5c: A parser for several tags that will reutilize the cvtag component in a less verbose way
 \newcommand{\cvtags}{%
+	\begin{minipage}{\linewidth-1em}
 	\foreach \tagValue in \taglist {%
 		\cvtag{\tagValue}
 	}
+	\end{minipage}
 }
 
 % Fork (before v1.6.5a): Tags now have a more consistent vertican and horizontal separation
 \newcommand{\cvtag}[1]{%
 	\color{white}
 	\tikz[baseline]\node[anchor=base,fill=black,draw=black,rounded corners,inner xsep=1ex,inner ysep=0.75ex,text height=1.5ex,text depth=.25ex]{\bfseries#1};
-	\vspace{0.25ex}
+	\vspace{0.1ex}
 }
 
 
