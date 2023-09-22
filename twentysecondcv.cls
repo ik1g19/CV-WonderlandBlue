@@ -250,8 +250,6 @@
 			\profilesection{Qualifications}   
 			\color{white}
 			\begin{flushleft}
-				{\large\textbf{MEng Computer Science 2:1}}
-				\qualifications
 				\schoolgrades
 			\end{flushleft}
 		}
